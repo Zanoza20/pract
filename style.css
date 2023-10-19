@@ -1,0 +1,33 @@
+.product-form input {
+    margin-bottom: 10px;
+}
+
+.product-form button {
+    margin-top: 10px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.product img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.login-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-container select, .login-container input, .login-container button {
+    margin: 5px;
+}
+
+.login-container input[type="password"] {
+    display: none;
+}

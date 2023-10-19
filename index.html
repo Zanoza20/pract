@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Інтернет-магазин</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    #ціна {
+      width: 50px;
+    }
+
+    #userAdminControls {
+      margin-right: 10px;
+      text-align: right;
+    }
+
+    #modeSelect {
+      margin-right: 10px;
+    }
+
+    #adminPassword {
+      margin-right: 10px;
+    }
+
+    #loginButton {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .column {
+      width: calc(33.33% - 10px);
+      float: left;
+      margin-right: 10px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .product-form input {
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    .product-form select {
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    .product-form button {
+      margin-top: 10px;
+      background-color: purple;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h1>Інтернет-магазин</h1>
+
+<div id="userAdminControls">
+  <select id="modeSelect">
+    <option value="користувач">Користувач</option>
+    <option value="адміністратор">Адміністратор</option>
+  </select>
+  <input id="adminPassword" type="password" placeholder="Пароль адміністратора">
+  <button id="loginButton">Увійти</button>
+</div>
+
+<form id="addProductForm" style="display: none;">
+  <h2>Додати товар</h2>
+  <div class="product-form">
+    <div class="product-form-row">
+      <input type="text" id="виробник" placeholder="Виробник" required>
+      <input type="text" id="модель" placeholder="Модель" required>
+      <input type="text" id="тип" placeholder="Тип" required>
+    </div>
+    <div class="product-form-row">
+      <input type="number" id="обсяг" placeholder="Об'єм пам'яті (ГБ)" required>
+      <input type="text" id="speedClass" placeholder="Speed Class" required>
+      <input type="number" id="швидкістьЧитання" placeholder="Максимальна швидкість читання (МБ/с)" required>
+      <input type="number" id="швидкістьЗапису" placeholder="Максимальна швидкість запису (МБ/с)" required>
+    </div>
+    <input type="file" id="зображення" accept="image/*" required>
+    <img id="зображення_прев'ю" alt="Прев'ю зображення" style="max-width: 100%;">
+    <input type="number" id="ціна" placeholder="Ціна" style="color: red;" required>
+    <select id="наявність" required>
+      <option value="в_наявності">В наявності</option>
+      <option value="немає_на_складі">Немає на складі</option>
+    </select>
+    <button type="submit">Додати</button>
+  </div>
+</form>
+
+<h2>Товари</h2>
+<input type="text" id="пошук" placeholder="Пошук">
+<select id="сортування">
+  <option value="виробник">Сортувати за Виробником</option>
+  <option value="модель">Сортувати за Моделлю</option>
+  <option value="обсяг">Сортувати за Об'ємом пам'яті</option>
+</select>
+
+<div class="column" id="column1"></div>
+<div class="column" id="column2"></div>
+<div class= "column" id="column3"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
